@@ -1,0 +1,36 @@
+# ─── Web Framework ────────────────────────────────────
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.9        # Required for FastAPI form parsing (Twilio webhook)
+
+# ─── Environment ──────────────────────────────────────
+python-dotenv==1.0.0
+
+# ─── Twilio ───────────────────────────────────────────
+twilio==8.12.0
+
+# ─── AI / LLM ─────────────────────────────────────────
+groq==1.0.0
+langgraph==0.0.40
+langchain-core==0.1.52         # Must be >=0.1.46 for langgraph 0.0.40
+google-generativeai
+
+# ─── Firebase ─────────────────────────────────────────
+firebase-admin==6.4.0
+
+# ─── Voice ────────────────────────────────────────────
+gTTS==2.5.1                    # Text to speech (output)
+# Whisper runs via Groq API — no local install needed
+
+# ─── Scraping ─────────────────────────────────────────
+beautifulsoup4==4.12.3
+lxml==5.1.0                    # HTML parser for BeautifulSoup
+requests==2.31.0
+
+# ─── HTTP / Async ─────────────────────────────────────
+httpx==0.26.0                  # Used internally by fastapi/groq
+anyio==4.2.0                   # Async support
+
+# ─── Utilities (stdlib — no install needed) ───────────
+# json, os, re, uuid, hashlib, tempfile, random, string,
+# time, sys, datetime, typing, contextlib — all built-in
